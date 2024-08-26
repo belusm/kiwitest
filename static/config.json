@@ -1,13 +1,10 @@
 {
     "windowTitle": "SocialChat",
     "startupScreen": "welcome",
-    "kiwiServer": "https://localdev.clients.kiwiirc.com/webirc/kiwiirc/",
+    "kiwiServer": "https://ntch.cl/webirc/kiwiirc/",
     "restricted": false,
     "theme": "Default",
-    "presetNetworks": [
-        { "name": "Socialchat", "server": "irc.netchat.cl", "port": 6667, "tls": false }
-        
-    ],
+    
     "themes": [
         { "name": "Default", "url": "static/themes/default" },
         { "name": "Dark", "url": "static/themes/dark" },
@@ -20,7 +17,7 @@
         { "name": "Elite", "url": "static/themes/elite" }
     ],
     "startupOptions" : {
-        "channel": "#kiwiirc-default",
+       "channel": "#kiwiirc-default",
         "nick": "kiwi-n?"
     },
     "embedly": {
