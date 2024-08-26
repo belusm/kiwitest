@@ -1,35 +1,85 @@
 {
-    "windowTitle": "SocialChat",
-    "startupScreen": "welcome",
-    "kiwiServer": "https://ntch.cl/webirc/kiwiirc/",
-    "restricted": false,
-    "theme": "Default",
-    
-    "themes": [
-        { "name": "Default", "url": "static/themes/default" },
-        { "name": "Dark", "url": "static/themes/dark" },
-        { "name": "Coffee", "url": "static/themes/coffee" },
-        { "name": "GrayFox", "url": "static/themes/grayfox" },
-        { "name": "Nightswatch", "url": "static/themes/nightswatch" },
-        { "name": "Osprey", "url": "static/themes/osprey" },
-        { "name": "Radioactive", "url": "static/themes/radioactive" },
-        { "name": "Sky", "url": "static/themes/sky" },
-        { "name": "Elite", "url": "static/themes/elite" }
-    ],
-    "startupOptions" : {
-       "channel": "#kiwiirc-default",
-        "nick": "kiwi-n?"
+	"windowTitle": "SocialChat.cl",
+	"startupScreen": "welcome",
+	"showColorPicker": true,
+	"useMonospace":false,
+	"kiwiServer": "https://ntch.cl/webirc/kiwiirc/",
+	"restricted": true,
+	"hide_advanced": true,
+	"noticeActiveBuffer": false,
+	"theme": "Socialchat",
+	"themes": [
+		{ "name": "Default", "url": "static/themes/default" },
+		{ "name": "Dark", "url": "static/themes/dark" },
+		{ "name": "Coffee", "url": "static/themes/coffee" },
+		{ "name": "GrayFox", "url": "static/themes/grayfox" },
+		{ "name": "Nightswatch", "url": "static/themes/nightswatch" },
+		{ "name": "Osprey", "url": "static/themes/osprey" },
+		{ "name": "Radioactive", "url": "static/themes/radioactive" },
+		{ "name": "Sky", "url": "static/themes/sky" },
+		{ "name":"Socialchat","url":"static/themes/socialchat"},
+		{ "name":"Socialchat-Light","url":"static/themes/socialchat-light"}
+	],
+	
+
+	"startupOptions" : {
+		"channel": "#Chile",
+		"nick": "secret?",
+		"greetingText": "Hola!",
+		"infoBackground": "#2c2c2c",
+		"autoConnect":true,
+		"infoContent": "<h2>Iniciando viaje al servidor.... </h2><span>Manten un buen comportamiento. Buen chat!</span>" 
+
+
+
+	},
+
+	
+	"plugins" :[
+	{"name": "More_Channels","url":"static/plugins/more_channels.html"},
+	{"name": "conference", "url":"static/plugins/plugin-conference.js"}
+	],
+
+	"conference": {
+    "secure": false,
+    "server": "meet.jit.si",
+    "queries": true,
+    "channels": true,
+    "buttonIcon": "fa-phone",
+    "viewHeight": "40%",
+    "enabledInChannels": ["*"],
+    "groupInvitesTTL": 30000,
+    "maxParticipantsLength": 60,
+    "participantsMore": "more...",
+    "inviteText": "{{ nick }} is inviting you to a private call.",
+    "joinText": "{{ nick }} has joined the conference.",
+    "joinButtonText": "Join now!",
+    "showLink": false,
+    "useLinkShortener": false,
+    "linkShortenerURL": "https://x0.no/api/?{{ link }}",
+    "linkShortenerAPIToken": "API_KEY_HERE",
+    "interfaceConfigOverwrite": {
+        "SHOW_JITSI_WATERMARK": false,
+        "SHOW_WATERMARK_FOR_GUESTS": false,
+        "TOOLBAR_BUTTONS": [
+            "microphone", "camera", "fullscreen", "hangup",
+            "settings", "videoquality", "filmstrip", "fodeviceselection",
+            "stats", "shortcuts"
+        ]
     },
-    "embedly": {
-        "key": ""
-    },
-    "plugins": [
-        { "name": "customise", "url": "static/plugins/customise.html" },
-        { "name": "conference", "url": "static/plugins/plugin-conference.js"}
-    ],
-    
-    "conference": {
-        "server": "meet.jit.si",
-        "secure": false
+    "configOverwrite": {
+        "startWithVideoMuted": true,
+        "startWithAudioMuted": true
     }
+},	
+
+	"buffers" : {
+		"show_joinparts": true,
+		"default_kick_reason": "Tu comportamiento no es el deseado en esta comunidad",
+		"messageLayout": "compact",
+		"nicklist_avatars": false
+
+	}
+
+
 }
