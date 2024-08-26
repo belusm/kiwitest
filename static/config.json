@@ -44,31 +44,11 @@
     "secure": false,
     "server": "meet.jit.si",
     "queries": true,
-    "channels": true,
-    "buttonIcon": "fa-phone",
-    "viewHeight": "40%",
-    "enabledInChannels": ["*"],
-    "groupInvitesTTL": 30000,
-    "maxParticipantsLength": 60,
-    "participantsMore": "more...",
-    "inviteText": "{{ nick }} is inviting you to a private call.",
-    "joinText": "{{ nick }} has joined the conference.",
-    "joinButtonText": "Join now!",
-    "showLink": false,
-    "useLinkShortener": false,
-    "linkShortenerURL": "https://x0.no/api/?{{ link }}",
-    "linkShortenerAPIToken": "API_KEY_HERE",
-    "interfaceConfigOverwrite": {
-        "SHOW_JITSI_WATERMARK": false,
-        "SHOW_WATERMARK_FOR_GUESTS": false,
-        "TOOLBAR_BUTTONS": [
-            "microphone", "camera", "fullscreen", "hangup",
-            "settings", "videoquality", "filmstrip", "fodeviceselection",
-            "stats", "shortcuts"
-        ]
-    },
+    "channels": false,
+    
+    
     "configOverwrite": {
-        "startWithVideoMuted": true,
+        "startWithVideoMuted": false,
         "startWithAudioMuted": true
     }
 },	
