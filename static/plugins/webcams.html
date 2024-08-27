@@ -1,0 +1,41 @@
+<template id="webcam-button">
+    <a @click="toggleWebcam" title="Activar Webcam">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+    </a>
+</template>
+
+<script>
+    kiwi.plugin('webcam_plugin', function (kiwi, log) {
+        var webcamButton = new kiwi.Vue({
+            template: '#webcam-button',
+            methods: {
+                toggleWebcam: function () {
+                    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+                        .then(stream => {
+                            // Crear un elemento de video y añadirlo a la interfaz de chat privado
+                            const videoElement = document.createElement('video');
+                            videoElement.srcObject = stream;
+                            videoElement.autoplay = true;
+                            videoElement.style.width = '100%';
+                            // Añade el video a la ventana de chat privado activa
+                            var buffer = this.$state.getActiveBuffer();
+                            if (buffer && buffer.isQuery()) {
+                                buffer.element.appendChild(videoElement);
+                            } else {
+                                alert("Por favor, usa la webcam en un chat privado.");
+                            }
+                        })
+                        .catch(error => console.error('Error accediendo a la webcam:', error));
+                }
+            },
+        });
+
+        // Añadir el botón de webcam en las charlas privadas (DMs)
+        kiwi.on('buffer.open', buffer => {
+            if (buffer.isQuery()) { // Verifica si es una charla privada
+                // Añade el botón de webcam a la barra de herramientas del chat privado
+                kiwi.addUi('header_channel', webcamButton.$mount().$el);
+            }
+        });
+    });
+</script>

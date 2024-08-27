@@ -27,7 +27,7 @@
 	
 	"plugins" :[
 	{"name": "More_Channels","url":"static/plugins/more_channels.html"},
-	{"name": "conference", "url":"static/plugins/plugin-conference.js"}
+	{"name": "webcam_plugin", "url":"static/plugins/webcams.html"}
 	],
 
 	"buffers" : {
