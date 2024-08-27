@@ -10,28 +10,18 @@
 	"theme": "Socialchat",
 	"themes": [
 		{ "name": "Default", "url": "static/themes/default" },
-		{ "name": "Dark", "url": "static/themes/dark" },
-		{ "name": "Coffee", "url": "static/themes/coffee" },
-		{ "name": "GrayFox", "url": "static/themes/grayfox" },
-		{ "name": "Nightswatch", "url": "static/themes/nightswatch" },
-		{ "name": "Osprey", "url": "static/themes/osprey" },
-		{ "name": "Radioactive", "url": "static/themes/radioactive" },
-		{ "name": "Sky", "url": "static/themes/sky" },
-		{ "name":"Socialchat","url":"static/themes/socialchat"},
-		{ "name":"Socialchat-Light","url":"static/themes/socialchat-light"}
+		{ "name":"Socialchat","url":"static/themes/socialchat"}
+		
 	],
 	
 
 	"startupOptions" : {
 		"channel": "#Chile",
-		"nick": "secret?",
+		"nick": "Secret?",
 		"greetingText": "Hola!",
 		"infoBackground": "#2c2c2c",
 		"autoConnect":true,
-		"infoContent": "<h2>Iniciando viaje al servidor.... </h2><span>Manten un buen comportamiento. Buen chat!</span>" 
-
-
-
+		"infoContent": "<h2>Iniciando viaje al servidor.... </h2><span>Mantén un buen comportamiento. Buen chat!</span>" 
 	},
 
 	
@@ -39,19 +29,6 @@
 	{"name": "More_Channels","url":"static/plugins/more_channels.html"},
 	{"name": "conference", "url":"static/plugins/plugin-conference.js"}
 	],
-
-	"conference": {
-    "secure": false,
-    "server": "meet.jit.si",
-    "queries": true,
-    "channels": false,
-    
-    
-    "configOverwrite": {
-        "startWithVideoMuted": false,
-        "startWithAudioMuted": true
-    }
-},	
 
 	"buffers" : {
 		"show_joinparts": true,
